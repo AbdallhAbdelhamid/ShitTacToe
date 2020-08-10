@@ -2,7 +2,7 @@ using System;
 
 namespace TicTac
 {
-    public class draw
+    class draw
     {
         public void Grid(IMark[] marks)
         {

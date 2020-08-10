@@ -6,19 +6,28 @@ namespace TicTac
     public interface IMark
     {
         void DrawMark();
+        string Label
+        {
+            get;
+        }
     }
 
 
-    public class Mark : IMark
+    class Mark : IMark
     {
-        public virtual void  DrawMark()
+        public virtual void DrawMark()
         {
             System.Console.Write(" _ ");
         }
-        public string Label = new string("Empty");
+
+        public string Label
+        {
+            get;
+            private protected set;
+        } = "Empty";
     }
 
-    public class XMark : Mark
+    class XMark : Mark
     {
         public XMark()
         {
@@ -32,9 +41,9 @@ namespace TicTac
         }
     }
 
-    public class OMark : Mark
+    class OMark : Mark
     {
-        
+
         public OMark()
         {
             Label = "OMark";
